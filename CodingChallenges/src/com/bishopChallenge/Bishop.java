@@ -34,6 +34,8 @@ public class Bishop {
 		int endX = end.toCharArray()[0]-48;
 		int endY = end.toCharArray()[1];
 		
+		//bishops can only travel same color. if the current square is light, but end square is dark, then it cannot reach it. 
+		//Any square that is the same color can be reached in 2 moves or 1 if it is on the same diagonal.
 		if (currentX % 2 != currentY%2 || endX%2 != endY%2) {
 			return false;
 		} else {
